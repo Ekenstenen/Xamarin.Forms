@@ -48,6 +48,28 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="CreateContent">
+      <MemberSignature Language="C#" Value="public TItem CreateContent (int index, object item = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TItem CreateContent(int32 index, object item) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <param name="item">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="GetGlobalIndexForGroup">
       <MemberSignature Language="C#" Value="public int GetGlobalIndexForGroup (Xamarin.Forms.ITemplatedItemsList&lt;TItem&gt; group);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetGlobalIndexForGroup(class Xamarin.Forms.ITemplatedItemsList`1&lt;!TItem&gt; group) cil managed" />

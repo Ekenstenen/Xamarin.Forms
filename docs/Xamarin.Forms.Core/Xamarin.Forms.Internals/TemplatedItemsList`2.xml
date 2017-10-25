@@ -56,6 +56,30 @@
     <remarks>To be added.</remarks>
   </Docs>
   <Members>
+    <Member MemberName="AddContent">
+      <MemberSignature Language="C#" Value="public TItem AddContent (int index, object item, bool insert = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !TItem AddContent(int32 index, object item, bool insert) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>TItem</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Object" />
+        <Parameter Name="insert" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <param name="item">To be added.</param>
+        <param name="insert">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="CollectionChanged">
       <MemberSignature Language="C#" Value="public event System.Collections.Specialized.NotifyCollectionChangedEventHandler CollectionChanged;" />
       <MemberSignature Language="ILAsm" Value=".event class System.Collections.Specialized.NotifyCollectionChangedEventHandler CollectionChanged" />
@@ -88,8 +112,8 @@
       </Docs>
     </Member>
     <Member MemberName="CreateContent">
-      <MemberSignature Language="C#" Value="public TItem CreateContent (int index, object item, bool insert = false);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !TItem CreateContent(int32 index, object item, bool insert) cil managed" />
+      <MemberSignature Language="C#" Value="public TItem CreateContent (int index, object item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance !TItem CreateContent(int32 index, object item) cil managed" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
@@ -100,13 +124,11 @@
       <Parameters>
         <Parameter Name="index" Type="System.Int32" />
         <Parameter Name="item" Type="System.Object" />
-        <Parameter Name="insert" Type="System.Boolean" />
       </Parameters>
       <Docs>
-        <param name="index">For internal use by the Xamarin.Forms platform.</param>
-        <param name="item">For internal use by the Xamarin.Forms platform.</param>
-        <param name="insert">For internal use by the Xamarin.Forms platform.</param>
-        <summary>For internal use by the Xamarin.Forms platform.</summary>
+        <param name="index">To be added.</param>
+        <param name="item">To be added.</param>
+        <summary>To be added.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>

@@ -529,11 +529,18 @@ namespace Xamarin.Forms.Internals
 			return ItemTemplate.SelectDataTemplate(item, _itemsView);
 		}
 
-		public TItem CreateContent(int index, object item, bool insert = false)
+		public TItem CreateContent(int index, object item)
 		{
 			TItem content = ItemTemplate != null ? (TItem)ItemTemplate.CreateContent(item, _itemsView) : _itemsView.CreateDefault(item);
 
 			content = UpdateContent(content, index, item);
+
+			return content;
+		}
+
+		public TItem AddContent(int index, object item, bool insert = false)
+		{
+			var content = CreateContent(index, item);
 
 			if ((CachingStrategy & ListViewCachingStrategy.RecycleElement) != 0)
 				return content;
@@ -592,7 +599,7 @@ namespace Xamarin.Forms.Internals
 		{
 			TItem content;
 			if (_templatedObjects.Count <= index || (content = _templatedObjects[index]) == null)
-				content = CreateContent(index, item);
+				content = AddContent(index, item);
 
 			return content;
 		}
@@ -668,7 +675,7 @@ namespace Xamarin.Forms.Internals
 			for (var i = 0; i < items.Count; i++)
 			{
 				int index = i + startingIndex;
-				TItem content = !forceCreate ? GetOrCreateContent(index, items[i]) : CreateContent(index, items[i]);
+				TItem content = !forceCreate ? GetOrCreateContent(index, items[i]) : AddContent(index, items[i]);
 				if (setIndex)
 					SetIndex(content, index);
 

@@ -663,7 +663,7 @@ namespace Xamarin.Forms.Platform.iOS
 				}
 
 				// We're going to base our estimate off of the first cell
-				var firstCell = templatedItems.First();
+				var firstCell = templatedItems.CreateContent(0, templatedItems.ListProxy[0]);
 
 				// Let's skip this optimization for grouped lists. It will likely cause more trouble than it's worth.
 				if (firstCell.Height > 0 && !List.IsGroupingEnabled)
